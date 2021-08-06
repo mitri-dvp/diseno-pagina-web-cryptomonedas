@@ -7,7 +7,7 @@
 html,
 body {
   scroll-behavior: smooth;
-  scroll-padding-top: 5rem;
+  scroll-padding-top: 6rem;
   font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --dsektop_width: 1080px;
 }
@@ -78,23 +78,27 @@ a {
 main .body {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 5rem;
+  gap: 3rem;
+  padding: 3rem;
   max-width: var(--dsektop_width);
   margin: auto;
 }
 
 main .side_bar {
-  margin: 3rem 0;
   padding: 2rem;
   background-color: #081935;
+  height: max-content;
   color: #fff;
 }
 
 main .side_bar {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
+main .side_bar img {
+  margin-top: 5rem;
+}
+
 main .side_bar > h2 {
   font-size: 1rem;
   text-transform: uppercase;
@@ -152,7 +156,6 @@ section p {
   font-size: 1.25rem;
 }
 section > div {
-  padding: 3rem;
   display: flex;
   gap: 5rem;
   max-width: var(--dsektop_width);
@@ -171,8 +174,15 @@ section > div .content p {
   letter-spacing: 0.02rem;
   margin-bottom: 1rem;
 }
-section > div .content  h1 {
+section > div .content h1 {
+  margin-bottom: 2rem;
+}
+
+section > div .content img {
   margin: 2rem 0;
+}
+section:first-child > div .content:first-of-type img {
+  margin-top: 0;
 }
 
 /* FOOTER */
