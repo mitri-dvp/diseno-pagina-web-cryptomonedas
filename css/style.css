@@ -45,6 +45,7 @@ a {
   justify-content: space-between;
   max-width: var(--dsektop_width);
   margin: auto;
+  position: relative;
 }
 .header_content nav {
   height: 100%;
@@ -67,12 +68,16 @@ a {
   display: flex;
   align-items: center;
 }
-.header_content .image_container img {
-}
 .header_content .image_container span {
   margin-left: 1rem;
   transform: translateY(-10%);
 }
+
+.header_content .mobile_button,
+.header_content .mobile_nav {
+  display: none;
+}
+
 
 /* MAIN BAR */
 main .body {
@@ -89,6 +94,8 @@ main .side_bar {
   background-color: #081935;
   height: max-content;
   color: #fff;
+  width: min-content;
+  margin: 0 auto;
 }
 
 main .side_bar {
@@ -111,6 +118,7 @@ section.hero {
   background-color: #19284d;
   background-color: #081935;
   background-image: url('../assets/hero.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   padding-top: 5rem;
   color: #fff;
@@ -161,10 +169,19 @@ section > div {
   max-width: var(--dsektop_width);
   margin: auto;
 }
-section > div .content,
-section > div img { 
+section > div .content { 
   width: 100%;
   height: 100%;
+}
+section > div img {
+}
+
+.main_bar {
+  width: min-content;
+  margin: auto;
+}
+.main_bar section {
+  width: 100%;
 }
 section > div .content {
   align-self: center;
@@ -192,4 +209,63 @@ footer {
   color: #fff;
   padding: 2rem;
   text-align: center;
+}
+
+@media (max-width: 1080px) {
+  main .body {
+    grid-template-columns: 1fr;
+  }
+  .hero .content {
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+    justify-content: center;
+    max-width: 400px;
+  }
+  .hero .content a {
+    margin: auto;
+  }
+  .header_content .desktop_nav {
+    display: none;
+  }
+  .header_content .mobile_button {display: block;}
+  .header_content .mobile_nav.active {display: grid;}
+
+  .header_content .mobile_nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #19284d;
+    text-align: center;
+    height: max-content;
+    gap: 1rem;
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+
+  .header_content .mobile_nav a {
+    justify-content: center;
+    padding: 1rem;
+  }
+  .header_content .mobile_button {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    width: 5rem;
+    height: 4rem;
+    background-color: #fcc117;
+    color: #19284d;
+    border: 0;
+    padding: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .header_content .mobile_button:hover {
+    background-color: #dda503;
+  }
+
+
+
 }

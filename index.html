@@ -8,15 +8,31 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="icon" href="./assets/icon.svg" type="image/x-icon">
 </head>
-<body>
 
+<!-- TO-DO -->
+<!-- RESPONSIVE -->
+<!-- PICTURE CON SRC -->
+<body>
   <header class="header_container">
     <div class="header_content">
       <a href="#" class="image_container">
         <img src="./assets/icon.svg" alt="icon">
         <span>BitInsider</span>
       </a>
-      <nav>
+      <nav class="desktop_nav">
+        <a href="#">inicio</a>
+        <a href="#about">acerca de</a>
+        <a href="#bitcoin">bitcoin</a>
+        <a href="#blockchain">blockchain</a>
+        <a href="#buy">compra</a>
+        <a href="#use">uso</a>
+      </nav>
+      <button class="mobile_button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+        </svg>
+      </button>
+      <nav class="mobile_nav">
         <a href="#">inicio</a>
         <a href="#about">acerca de</a>
         <a href="#bitcoin">bitcoin</a>
@@ -42,7 +58,7 @@
         <section class="about" id="about">
           <div>
             <div class="content">
-              <img src="./assets/about.webp" alt="transacciones">
+              <img src="./assets/about.jpg" alt="transacciones">
               <h1>¿Que son las criptomonedas?</h1>
               <p>La palabra criptomoneda se refiere a un grupo de <strong>activos digitales</strong> donde las transacciones se aseguran y verifican mediante <strong>criptografía</strong>, una práctica científica de codificación y decodificación de datos y verificar la transferencia de activos usando <strong>tecnologías de registro distribuido</strong>.</p>
             </div>
@@ -52,7 +68,7 @@
         <section class="bitcoin" id="bitcoin">
           <div>
             <div class="content">
-              <img src="./assets/bitcoin.jpeg" alt="bitcoin">
+              <img src="./assets/bitcoin.jpg" alt="bitcoin">
               <h1>¿Que es Bitcoin?</h1>
               <p>Bitcoin es el primer sistema de pago y criptomonedas <strong>descentralizado</strong> exitoso del mundo, lanzado en <strong>2009</strong> por Satoshi Nakamoto.</p>
               <p>Bitcoin es <strong>público</strong> y opera <strong>independientemente</strong> de cualquier <strong>entidad estatal</strong>.</p>
@@ -112,7 +128,7 @@
   <footer>
     2021 &copy; BitInsider.
   </footer>
-
+  
   <script src="./js/script.js"></script>
 </body>
 </html>
