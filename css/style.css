@@ -9,7 +9,8 @@ body {
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
   font-family: 'Lato', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --dsektop_width: 1080px;
+  --desktop_width: 1080px;
+  --mobile_width: 500px;
 }
 
 img {
@@ -43,7 +44,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: var(--dsektop_width);
+  max-width: var(--desktop_width);
   margin: auto;
   position: relative;
 }
@@ -85,8 +86,18 @@ main .body {
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
   padding: 3rem;
-  max-width: var(--dsektop_width);
+  max-width: var(--desktop_width);
   margin: auto;
+}
+
+main .main_bar {
+  margin: auto;
+}
+main .main_bar section {
+  width: 100%;
+  max-width: 700px;
+  display: grid;
+  justify-content: center;
 }
 
 main .side_bar {
@@ -94,11 +105,7 @@ main .side_bar {
   background-color: #081935;
   height: max-content;
   color: #fff;
-  width: min-content;
   margin: 0 auto;
-}
-
-main .side_bar {
   display: flex;
   flex-direction: column;
 }
@@ -166,7 +173,7 @@ section p {
 section > div {
   display: flex;
   gap: 5rem;
-  max-width: var(--dsektop_width);
+  max-width: var(--desktop_width);
   margin: auto;
 }
 section > div .content { 
@@ -176,13 +183,6 @@ section > div .content {
 section > div img {
 }
 
-.main_bar {
-  width: min-content;
-  margin: auto;
-}
-.main_bar section {
-  width: 100%;
-}
 section > div .content {
   align-self: center;
 }
@@ -195,6 +195,10 @@ section > div .content h1 {
   margin-bottom: 2rem;
 }
 
+section > div .content >div {
+  display: flex;
+  justify-content: center;
+}
 section > div .content img {
   margin: 2rem 0;
 }
@@ -214,7 +218,9 @@ footer {
 @media (max-width: 1080px) {
   main .body {
     grid-template-columns: 1fr;
+    padding: 2rem 1rem;
   }
+
   .hero .content {
     margin: 0 auto;
     width: 100%;
@@ -266,6 +272,32 @@ footer {
     background-color: #dda503;
   }
 
-
-
 }
+
+@media (max-width: 700px) {
+  :root {
+    font-size: 0.9rem;
+  }
+
+  main .body {
+    max-width: var(--mobile_width);
+  }
+}
+
+@media (max-width: 500px) {
+  .hero .content h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+  .hero .content p {
+    font-size: 1rem;
+  }
+  main .side_bar {
+    padding: 1rem;
+  }
+  main .side_bar img {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}
+
